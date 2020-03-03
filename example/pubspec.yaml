@@ -1,5 +1,6 @@
 name: root_bundle_example
 description: Demonstrates how to use the root_bundle plugin.
+version: 0.0.1
 publish_to: 'none'
 
 environment:

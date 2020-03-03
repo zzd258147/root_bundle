@@ -9,6 +9,10 @@ public class SwiftRootBundlePlugin: NSObject, FlutterPlugin {
   }
 
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
-    result("iOS " + UIDevice.current.systemVersion)
+    if call.method == "getPath" {
+        result("file://\(Bundle.main.bundlePath)/Frameworks/App.framework/flutter_assets/")
+    } else {
+        result(FlutterMethodNotImplemented)
+    }
   }
 }
